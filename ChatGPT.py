@@ -1,11 +1,11 @@
 import openai
-
+import config
 
 class ChatGPT:
-    openai.api_key = "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"
+    openai.api_key = config.CHAT_TOKEN
 
     @staticmethod
-    def Ask(message):
+    def Ask(message: str):
         completion = openai.ChatCompletion.create(
             model="gpt-3.5-turbo",
             messages=[

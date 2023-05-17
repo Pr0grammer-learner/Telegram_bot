@@ -81,7 +81,7 @@ async def scheduled(wait_for):
         if new_news:
             # Если новости есть, переворачиваем список и итерируем
             new_news.reverse()
-            for nw in new_news:
+            for _ in new_news:
                 # Парсим инфу о новой новости
                 nfo = ma.news_info()
 
